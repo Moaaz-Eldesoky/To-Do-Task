@@ -20,11 +20,21 @@ export class TasksListComponent {
     });
     this.emitUpdatedTasks();
   }
+  changeContent(task: any, e: any) {
+    this.tasks.map((t) => {
+      if (t.id === task.id) {
+        t.title = e.target.value;
+      }
+    });
+    this.emitUpdatedTasks();
+    console.log('tasks from changeContent' + JSON.stringify(this.tasks));
+  }
   removeTask(task: any) {
-    let filterdTasks = this.tasks.filter((e) => e.id != task.id);
-    this.tasks = filterdTasks;
+    let updateTasks = this.tasks.filter((e) => e.id != task.id);
+    this.tasks = updateTasks;
     this.emitUpdatedTasks();
   }
+
   private emitUpdatedTasks() {
     this.tasksUpdated.emit(this.tasks);
   }
