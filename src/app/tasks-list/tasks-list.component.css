@@ -1,0 +1,36 @@
+.tasks input {
+  width: 50%;
+  height: 45px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: rgb(38 47 51);
+  color: rgb(224, 228, 224);
+  padding-left: 20px;
+}
+
+.tasks {
+  position: relative;
+}
+
+.controllers {
+  width: 70px;
+  justify-content: space-between;
+  position: absolute;
+  top: 7px;
+  right: 170px;
+
+}
+
+.controllers .complate,
+.controllers .remove {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  background-color: rgb(143 144 143);
+  cursor: pointer;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}

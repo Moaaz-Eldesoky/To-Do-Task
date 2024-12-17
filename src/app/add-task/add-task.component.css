@@ -1,0 +1,69 @@
+/* colors part */
+.colors {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin-left: auto;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.colors .dark,
+.colors .light,
+.colors .gray {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.colors .dark {
+  background-color: #000;
+}
+
+.colors .light {
+  background-color: #FFF;
+}
+
+.colors .gray {
+  background-color: linear-gradient(to right, #525454, #093040);
+}
+
+/* main App Part */
+.main_app h1 {
+  font-size: 70px;
+  color: #FFF;
+}
+
+.add_task_container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.main_app .add_task_input {
+  border: none;
+  border-radius: 20px;
+  background-color: #000;
+  padding-left: 20px;
+  height: 45px;
+  color: #FFF;
+}
+
+.add_task_input::placeholder {
+  color: #DDD;
+}
+
+.main_app .add_button {
+  background-color: #FFF;
+  border-radius: 0 20px 20px 0;
+  height: 47px;
+  width: 80px;
+  position: absolute;
+  top: -1px;
+  right: 0px;
+}
+
+.main_app .date-time {
+  color: #FFF;
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="colors">
+    <div class="gray"></div>
+    <div class="light"></div>
+    <div class="dark"></div>
+  </div>
+  <div class="main_app w-50 mx-auto text-center">
+    <h1 class="mx-auto">Just Do It.</h1>
+    <div class="add_task_container mt-4">
+      <input #taskInput type="text" class="add_task_input form-control " placeholder="Add Task">
+      <input class="add_button" type="submit" value="Add" (click)="addTask(taskInput)">
+    </div>
+    <p class="date-time mt-3">{{currentDateTime}}</p>
+    <app-tasks-list [tasks]="tasks" (tasksUpdated)="onTaskUpdated($event)"></app-tasks-list>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="tasks mt-3 mx-auto" *ngFor="let task of tasks">
+  <input type="text" class="form-control" [value]="task.title" [ngClass]="{'completed-task':task.completed}">
+  <div class="controllers d-flex ">
+    <div *ngIf="!task.completed" class="complate" (click)="changeStatus(task)"><i class="fa-solid fa-check"></i>
+    </div>
+    <div *ngIf="task.completed" class="complate" (click)="changeStatus(task)"><i
+        class="fa-sharp fa-solid fa-rotate-left"></i></div>
+    <div class="remove" (click)="removeTask(task)"><i class="fa-solid fa-trash"></i></div>
+  </div>
+</div>
