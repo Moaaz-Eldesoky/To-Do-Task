@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TasksListComponent } from '../tasks-list/tasks-list.component';
 import { Task } from '../interfaces/task-interface';
 
@@ -13,6 +13,9 @@ export class AddTaskComponent {
   tasks: Task[] = [];
   id_counter: number = 0;
   currentDateTime!: string;
+  colorsList = ['grey', 'light', 'dark'];
+  @Output() appColor = new EventEmitter<string>();
+  selectedColor: string = 'grey';
   constructor() {
     this.updateDateTime();
   }
@@ -28,5 +31,10 @@ export class AddTaskComponent {
   onTaskUpdated(updatedTasks: Task[]) {
     this.tasks = updatedTasks;
     console.log('Updated tasks in parent:', updatedTasks);
+  }
+  changeColor(color: string) {
+    this.appColor.emit(color);
+    this.selectedColor = color;
+    console.log(this.selectedColor);
   }
 }

@@ -1,4 +1,4 @@
-<div class="container main-app">
-  <app-add-task></app-add-task>
+<div class="container main-app" [ngClass]="backgroundColor">
+  <app-add-task (appColor)="updateBgColor($event)"></app-add-task>
 </div>
 <router-outlet />

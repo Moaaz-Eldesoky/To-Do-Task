@@ -8,9 +8,7 @@
   margin-bottom: 50px;
 }
 
-.colors .dark,
-.colors .light,
-.colors .gray {
+.colors * {
   border: 1px solid black;
   border-radius: 50%;
   width: 40px;
@@ -19,32 +17,54 @@
 }
 
 .colors .dark {
-  background-color: #000;
+  background: linear-gradient(to right, #001316, #013138);
 }
 
 .colors .light {
-  background-color: #FFF;
+  background: linear-gradient(to right, #d6f2ff, #fdfeff);
 }
 
-.colors .gray {
-  background-color: linear-gradient(to right, #525454, #093040);
+.colors .grey {
+  background: linear-gradient(to right, #525454, #093040);
 }
 
 /* main App Part */
-.main_app h1 {
+.dark h1 {
   font-size: 70px;
   color: #FFF;
 }
+
+.light h1 {
+  font-size: 70px;
+  color: #000;
+}
+
+.grey h1 {
+  font-size: 70px;
+  color: #FFF;
+}
+
+
 
 .add_task_container {
   position: relative;
   margin: 0 auto;
 }
 
-.main_app .add_task_input {
+.light .add_task_input,
+.grey .add_task_input {
   border: none;
   border-radius: 20px;
   background-color: #000;
+  padding-left: 20px;
+  height: 45px;
+  color: #FFF;
+}
+
+.dark .add_task_input {
+  border: none;
+  border-radius: 20px;
+  background-color: #01394c;
   padding-left: 20px;
   height: 45px;
   color: #FFF;
@@ -64,6 +84,11 @@
   right: 0px;
 }
 
-.main_app .date-time {
+.grey .date-time,
+.dark .date-time {
   color: #FFF;
+}
+
+.light .date-time {
+  color: #000;
 }

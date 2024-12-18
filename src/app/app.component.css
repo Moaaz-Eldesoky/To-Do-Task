@@ -1,5 +1,16 @@
 .main-app {
-  background: linear-gradient(to right, #525454, #093040);
   padding: 50px 10px;
   height: 45rem;
+}
+
+.dark {
+  background: linear-gradient(to right, #001316, #013138);
+}
+
+.light {
+  background: linear-gradient(to right, #d6f2ff, #fdfeff);
+}
+
+.grey {
+  background: linear-gradient(to right, #525454, #093040);
 }
