@@ -38,4 +38,8 @@ export class TasksListComponent {
   private emitUpdatedTasks() {
     this.tasksUpdated.emit(this.tasks);
   }
+
+  trackByTaskId(index: number, task: Task): number {
+    return task.id;
+  }
 }

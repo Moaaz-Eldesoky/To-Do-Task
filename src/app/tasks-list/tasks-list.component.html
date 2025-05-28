@@ -1,4 +1,4 @@
-<div class="tasks mt-3 mx-auto" *ngFor="let task of tasks">
+<div class="tasks mt-3 mx-auto" *ngFor="let task of tasks; trackBy: trackByTaskId">
   <input type="text" [disabled]="task.completed" class="form-control" [value]="task.title"
     [ngClass]="{'completed-task':task.completed}" (change)="changeContent(task,$event)">
   <div class="controllers d-flex ">
